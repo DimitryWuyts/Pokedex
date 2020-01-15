@@ -6,9 +6,11 @@ document.getElementById("midCircle").addEventListener("click",function () {
     let pokemonData = [];
     axios.get("https://pokeapi.co/api/v2/pokemon/" + pokemon + "/")
         .then(function (response) {
-            pokemonData = response.data.abilities;
-            console.log(pokemonData);
+            pokemonData = response.data;
+            console.log(pokemonData.abilities);
             console.log(response)
+            console.log(pokemonData.sprites.front_default)
+
         });
 
 
