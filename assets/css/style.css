@@ -723,7 +723,7 @@
     div#stats
     {
         height: 260px;
-        width: 280px;
+        width: 300px;
         padding: 10px;
         background-color: #30da0c;
         z-index: 1;
@@ -855,10 +855,12 @@
     margin-top: 347px;
     width: 9em;
     height: 2em;
+    padding:15px;
 }
 
 
 #midCircle:hover {
-    background-color: red;
+    border: 2px solid red
 }
+
 
