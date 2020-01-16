@@ -25,9 +25,16 @@ document.getElementById("midCircle").addEventListener("click",function () {
             let pokName = pokemonData.name;
             document.getElementById("pokName").innerHTML = "Name: " + pokName;
 
+
+            for (let j = 2; j < 5 ; j++) {
+                let moveX = document.createElement("div");
+                moveX.id = 'move' + [j];
+                console.log(moveX)
+                document.getElementById("moves").appendChild(moveX);
+                console.log("move" + [j])
+            }
+
             let moveList = [];
-
-
             moveList.push(pokemonData.moves);
 
 
@@ -47,7 +54,7 @@ document.getElementById("midCircle").addEventListener("click",function () {
 
 
     function randomizer() {
-        return Math.floor(Math.random() *100);
+        return Math.floor(Math.random() *30);
     }
 
 
