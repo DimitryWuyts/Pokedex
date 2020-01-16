@@ -863,4 +863,14 @@
     border: 2px solid red
 }
 
+#sprite {
+    margin-top:  100px;
+    width:170px;
+    height: 170px;
+}
+
+#picture {
+    margin-top: 100px;
+}
+
 
