@@ -25,13 +25,13 @@ document.getElementById("midCircle").addEventListener("click",function () {
             let pokName = pokemonData.name;
             document.getElementById("pokName").innerHTML = "Name: " + pokName;
 
-
+            //randomizer of moves
             for (let j = 2; j < 5 ; j++) {
                 let moveX = document.createElement("div");
                 moveX.id = 'move' + [j];
                 console.log(moveX)
                 document.getElementById("moves").appendChild(moveX);
-                console.log("move" + [j])
+                // console.log("move" + [j])
             }
 
             let moveList = [];
@@ -41,10 +41,10 @@ document.getElementById("midCircle").addEventListener("click",function () {
             for (let i = 0; i < 4 ; i++) {
                 let rndNumber = randomizer();
                 randomizer(moveList.length);
-                console.log(pokemonData.moves[rndNumber].move.name);
 
-                console.log(rndNumber)
+                let moveName = pokemonData.moves[rndNumber].move.name;
 
+                document.getElementById("move" +(i + 1 )+ '').innerHTML = pokemonData.moves[rndNumber].move.name;
 
             }
 
@@ -54,7 +54,7 @@ document.getElementById("midCircle").addEventListener("click",function () {
 
 
     function randomizer() {
-        return Math.floor(Math.random() *30);
+        return Math.floor(Math.random() * 50);
     }
 
 
