@@ -722,7 +722,7 @@
 
     div#stats
     {
-        height: 260px;
+        height: 230px;
         width: 300px;
         padding: 10px;
         background-color: #30da0c;
@@ -801,12 +801,12 @@
     div#yellowBox1
     {
         width: 140px;
-        height: 70px;
+        height: 100px;
         z-index: 1;
         background-color: #ffff00;
 
         position: absolute;
-        top: 415px;
+        top: 380px;
         left: 25px;
 
         border-radius: 15px;
@@ -823,12 +823,12 @@
     div#yellowBox2
     {
         width: 140px;
-        height: 70px;
+        height: 100px;
         z-index: 1;
         background-color: #ffff00;
 
         position: absolute;
-        top: 415px;
+        top: 380px;
         left: 185px;
 
         border-radius: 15px;
@@ -873,4 +873,11 @@
     margin-top: 100px;
 }
 
+#evolPrev {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+
+}
 

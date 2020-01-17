@@ -25,12 +25,13 @@ document.getElementById("midCircle").addEventListener("click",function () {
             document.getElementById("pokName").innerHTML = "Name: " + pokName;
 
             //Get type of pokemon from API
-            for (let i = 0; i < pokemonData.types.length ; i++) {
-                let pokType = pokemonData.types[0].type.name;
-                pokType += pokemonData.types[1].type.name;
+
+                let pokType1 = pokemonData.types[0].type.name;
+                // let pokType2 = pokemonData.types[1].type.name;
+                // pokType += pokemonData.types[1].type.name;
                 document.getElementById("pokType").innerHTML = pokType;
-                console.log(pokType)
-            }
+                console.log(pokType);
+
 
 
             //randomizer of moves
@@ -60,20 +61,27 @@ document.getElementById("midCircle").addEventListener("click",function () {
           axios.get(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.value.toLowerCase()}`)
               .then(function (response) {
 
-
-                  let prevName = response.data.evolves_from_species.name;
-
-
-
+                  if (response.data.evolves_from_species == null) {
+                        document.getElementById("evolPrev").src ="";
+                  }
 
 
-                  axios.get(`https://pokeapi.co/api/v2/pokemon/${prevName}/`)
-                    .then(function (antwoord) {
+                  else {
+                      let prevName = response.data.evolves_from_species.name;
 
-                        let prevEvolSprite = document.getElementById("evolPrev");
-                        prevEvolSprite.src = antwoord.data.sprites.front_default;
+                      axios.get(`https://pokeapi.co/api/v2/pokemon/${prevName}/`)
+                          .then(function (antwoord) {
 
-                    });
+                              let prevEvolSprite = document.getElementById("evolPrev");
+                              prevEvolSprite.src = antwoord.data.sprites.front_default;
+
+                          });
+                  }
+
+
+
+
+
               });
 
 
@@ -90,7 +98,7 @@ document.getElementById("midCircle").addEventListener("click",function () {
 
     //Randomizer function
     function randomizer() {
-        return Math.floor(Math.random() * 50);
+        return Math.floor(Math.random() * 25);
     }
 
 
