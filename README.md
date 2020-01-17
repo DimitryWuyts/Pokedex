@@ -1,5 +1,6 @@
 # Pokedex Dimitry en Chihyu
 
+# link to Pokedex : https://dimitrywuyts.github.io/Pokedex/
 # Link to exercise : https://github.com/becodeorg/atw-giertz-2-17/tree/master/2.The-Hills/Project/ajax-pokedex
 
 *Dont be afraid to kill your babys!*
